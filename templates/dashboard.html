@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>Dashboard</h2>
+<div id="expenseForm">
+    <h3>Add Expense</h3>
+    <form id="addExpenseForm">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required><br><br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required><br><br>
+        <label for="comments">Comments:</label>
+        <input type="text" id="comments" name="comments"><br><br>
+        <button type="submit">Add Expense</button>
+    </form>
+</div>
+<h3>Expenses</h3>
+<table id="expensesTable">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+            <th>Comments</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Expenses will be dynamically added here -->
+    </tbody>
+</table>
+<div id="chartContainer">
+    <canvas id="expenseChart"></canvas>
+</div>
+{% endblock %}
